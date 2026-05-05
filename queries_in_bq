@@ -1,0 +1,5 @@
+SELECT memberId, lastName, firstName, duesAmount, membershipValidThrough, memberType
+FROM `high-lacing-494711-d5.hayjay.membershipRecords` 
+where memberType = "Student Associate" AND lastName like  "Rob%"
+ORDER BY membershipValidThrough 
+LIMIT 1000
