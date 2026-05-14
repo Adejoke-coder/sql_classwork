@@ -1,0 +1,4 @@
+SELECT w.warehouse_alias, o.warehouse_id
+FROM `high-lacing-494711-d5.hayjay.w_orders` o 
+right join `high-lacing-494711-d5.hayjay.warehouse` w on o.warehouse_id = w.warehouse_id
+where order_id is null
