@@ -1,0 +1,4 @@
+SELECT count(o.order_id) as number_of_orders,w.warehouse_alias 
+FROM `high-lacing-494711-d5.hayjay.w_orders` o
+join `high-lacing-494711-d5.hayjay.warehouse` w on o.warehouse_id = w.warehouse_id
+group by warehouse_alias
