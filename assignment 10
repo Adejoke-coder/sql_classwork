@@ -1,0 +1,2 @@
+SELECT warehouse_id, employee_total, RANK() OVER (ORDER BY employee_total desc ) as rank_no 
+FROM `high-lacing-494711-d5.hayjay.warehouse`
