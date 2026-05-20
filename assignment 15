@@ -1,0 +1,4 @@
+SELECT  customer_id, count(order_id) as total_orders FROM `high-lacing-494711-d5.hayjay.w_orders` 
+GROUP BY customer_id
+order by total_orders desc
+LIMIT 1
