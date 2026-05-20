@@ -1,0 +1,2 @@
+select warehouse_id, amount, (amount / sum(amount) over()) * 100 as percentage_contribution
+from `high-lacing-494711-d5.hayjay.warehouse`
