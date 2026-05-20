@@ -1,0 +1,2 @@
+SELECT state, count(warehouse_id) as warehouse_count FROM `high-lacing-494711-d5.hayjay.warehouse` 
+GROUP BY state
