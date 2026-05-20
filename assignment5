@@ -1,0 +1,3 @@
+select warehouse_id, count(DISTINCT customer_id) as total_customers
+from`high-lacing-494711-d5.hayjay.w_orders`
+group by warehouse_id
