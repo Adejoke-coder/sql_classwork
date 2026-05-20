@@ -1,0 +1,3 @@
+select *
+from `high-lacing-494711-d5.hayjay.warehouse`
+where amount > (select avg(amount)from `hayjay.warehouse`)
