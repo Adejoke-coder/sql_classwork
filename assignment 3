@@ -1,0 +1,3 @@
+select warehouse_id, amount, sum(amount) over
+(order by warehouse_id) as cumulative_total_amount
+from`high-lacing-494711-d5.hayjay.warehouse`
