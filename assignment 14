@@ -1,0 +1,4 @@
+SELECT warehouse_id, (employee_total / maximum_capacity) as ratio 
+FROM `high-lacing-494711-d5.hayjay.warehouse` 
+ORDER BY ratio asc
+LIMIT 1
