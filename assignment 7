@@ -1,0 +1,3 @@
+select warehouse_id, min(order_date) as earliest_order, max(order_date) as latest_order
+from `high-lacing-494711-d5.hayjay.w_orders`
+group by warehouse_id
