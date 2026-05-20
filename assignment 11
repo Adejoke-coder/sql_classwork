@@ -1,0 +1,5 @@
+SELECT state, sum(amount) as total_amount 
+FROM `high-lacing-494711-d5.hayjay.warehouse`
+GROUP BY state
+ORDER BY total_amount asc 
+LIMIT 1
