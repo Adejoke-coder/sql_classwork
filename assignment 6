@@ -1,0 +1,6 @@
+select *
+from `high-lacing-494711-d5.hayjay.warehouse`
+where employee_total > (
+  select avg(employee_total)
+  from `high-lacing-494711-d5.hayjay.warehouse`
+)
