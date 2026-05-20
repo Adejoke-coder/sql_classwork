@@ -1,0 +1,4 @@
+select warehouse_id, count(order_id) as total_orders
+from`high-lacing-494711-d5.hayjay.w_orders`
+GROUP BY warehouse_id
+HAVING count(order_id) > 10
