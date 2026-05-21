@@ -1,0 +1,4 @@
+SELECT state, sum(amount) as combined_warehouse_amount 
+FROM `high-lacing-494711-d5.hayjay.warehouse` 
+group by state
+having combined_warehouse_amount > 100
