@@ -1,0 +1,4 @@
+select warehouse_id, count(customer_id) as total_number_of_customers
+from `high-lacing-494711-d5.hayjay.w_orders` 
+group by warehouse_id
+order by total_number_of_customers desc
