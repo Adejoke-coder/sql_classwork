@@ -1,0 +1,5 @@
+select c.CustomerKey, CONCAT(c.FirstName, '', c.LastName) as FullName
+from`high-lacing-494711-d5.hayjay.customers` c 
+left join `high-lacing-494711-d5.hayjay.a_sales` s
+on c.CustomerKey = s.CustomerKey
+where s.CustomerKey IS NULL
