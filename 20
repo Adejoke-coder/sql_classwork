@@ -1,0 +1,4 @@
+select CustomerKey, sum(OrderQuantity) as TotalOrderQuantity
+from `high-lacing-494711-d5.hayjay.a_sales`
+group by CustomerKey
+HAVING sum(OrderQuantity) > 100
