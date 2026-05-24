@@ -1,0 +1,5 @@
+select c.CustomerKey, CONCAT(c.FirstName, '', c.LastName) as FullName, c.BirthDate
+from`high-lacing-494711-d5.hayjay.customers` c 
+join `high-lacing-494711-d5.hayjay.a_sales` s 
+on c.CustomerKey = s.CustomerKey
+where EXTRACT(YEAR FROM c.BirthDate) < 1990
