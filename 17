@@ -1,0 +1,3 @@
+select CustomerKey, min(OrderDate) as FirstOrderDate, max(OrderDate) as LastOrderDate
+from `high-lacing-494711-d5.hayjay.a_sales`
+group by CustomerKey
