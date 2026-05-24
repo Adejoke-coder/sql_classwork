@@ -1,0 +1,5 @@
+select c.EducationLevel, c.Gender, sum(s.orderQuantity) as TotalOrderQuantity
+from `high-lacing-494711-d5.hayjay.a_sales` s 
+join `high-lacing-494711-d5.hayjay.customers` c
+on s.CustomerKey = c.CustomerKey
+group by c.EducationLevel, c.Gender
