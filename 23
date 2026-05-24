@@ -1,0 +1,4 @@
+select EmailAddress, COUNT(*) as DuplicateCustomerRecords
+from `high-lacing-494711-d5.hayjay.customers`
+group by EmailAddress
+HAVING COUNT(*) > 1
