@@ -1,0 +1,4 @@
+select CustomerKey, FirstName, LastName
+from `high-lacing-494711-d5.hayjay.customers`
+where EmailAddress IS NULL 
+OR EmailAddress = ''
