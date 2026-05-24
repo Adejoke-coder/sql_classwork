@@ -1,0 +1,5 @@
+Select c.CustomerKey, CONCAT(c.FirstName, '', c.LastName) as FullName, c.TotalChildren
+from `high-lacing-494711-d5.hayjay.customers` c 
+join `high-lacing-494711-d5.hayjay.a_sales` s
+on c.CustomerKey = s.CustomerKey
+where c.TotalChildren > 3
