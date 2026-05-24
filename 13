@@ -1,0 +1,7 @@
+select c.occupation, sum(s.OrderQuantity) as HighestTotalSalesQuantity
+from `high-lacing-494711-d5.hayjay.a_sales` s
+join `high-lacing-494711-d5.hayjay.customers` c 
+on s.CustomerKey = c.CustomerKey
+group by c.Occupation
+order by HighestTotalSalesQuantity desc
+limit 5 
