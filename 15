@@ -1,0 +1,4 @@
+select CustomerKey, COUNT(OrderNumber) as OrderCount
+from `high-lacing-494711-d5.hayjay.a_sales`
+group by CustomerKey
+having COUNT(OrderNumber) > 1
