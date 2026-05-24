@@ -1,0 +1,4 @@
+SELECT s.OrderNumber, s.OrderDate, s.ProductKey,s.OrderQuantity, c.FirstName, c. LastName, CONCAT(c.FirstName, '', c.LastName) as FullName, c.EmailAddress  
+FROM `high-lacing-494711-d5.hayjay.a_sales` s
+join `high-lacing-494711-d5.hayjay.customers` c 
+on s.CustomerKey = c.CustomerKey
