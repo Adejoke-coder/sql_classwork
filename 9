@@ -1,0 +1,7 @@
+select c.CustomerKey, CONCAT(c.FirstName, '', c.LastName) as FullName, sum(s.OrderQuantity) as TotalOrderQuantity
+from `high-lacing-494711-d5.hayjay.a_sales` s
+join `high-lacing-494711-d5.hayjay.customers` c
+on s.CustomerKey = c.CustomerKey
+group by c.CustomerKey, FullName
+order by TotalOrderQuantity desc
+limit 1
