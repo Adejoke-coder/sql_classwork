@@ -1,0 +1,5 @@
+select TerritoryKey, COUNT(OrderNumber) as HighestNumberOfOrders
+from `high-lacing-494711-d5.hayjay.a_sales`
+group by TerritoryKey
+order by HighestNumberOfOrders desc
+limit 1
