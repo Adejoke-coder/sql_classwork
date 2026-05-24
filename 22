@@ -1,0 +1,3 @@
+select CustomerKey, FirstName, LastName, BirthDate
+from `high-lacing-494711-d5.hayjay.customers`
+order by BirthDate asc
