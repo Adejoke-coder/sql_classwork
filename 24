@@ -1,0 +1,3 @@
+select ProductKey, avg(OrderQuantity) as AverageOrderQuantity
+from `high-lacing-494711-d5.hayjay.a_sales` 
+group by ProductKey
