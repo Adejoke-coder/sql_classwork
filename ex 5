@@ -1,0 +1,17 @@
+with CustomerOrders as (
+  select CustomerKey, sum(OrderQuantity) as TotalQuantity
+  from `hayjay.a_sales`
+  group by CustomerKey
+),
+AveragePurchase as (
+  select avg(TotalQuantity) as AverageQuantity
+  from CustomerOrders
+)
+SELECT CustomerKey, TotalQuantity
+from CustomerOrders
+where TotalQuantity >
+(
+  select AverageQuantity
+  from AveragePurchase
+)
+
