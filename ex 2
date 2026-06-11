@@ -1,0 +1,10 @@
+with CustomerOrders as (
+  select CustomerKey, sum(OrderQuantity) as TotalQuantity
+  from `hayjay.a_sales`
+  group by CustomerKey
+)
+select CustomerKey, TotalQuantity,Rank()OVER
+(
+  ORDER BY TotalQuantity DESC
+) as CustomerRank
+from CustomerOrders
