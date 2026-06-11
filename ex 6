@@ -1,0 +1,11 @@
+with OccupationSales as (
+  select c.Occupation, sum(s.OrderQuantity) as TotalQuantity
+  from `hayjay.customers`c 
+  join `hayjay.a_sales`s 
+  on c.CustomerKEY = s.CustomerKey
+  group by c.Occupation
+)
+select *
+from OccupationSales
+order by TotalQuantity DESC
+LIMIT 1
