@@ -1,0 +1,11 @@
+with avgincome as (
+SELECT  avg(AnnualIncome) as AverageIncome
+ FROM `high-lacing-494711-d5.hayjay.customers`
+)
+select CustomerKey, FirstName, LastName, AnnualIncome
+from `hayjay.customers`
+where AnnualIncome >
+(
+  select AverageIncome
+  from avgincome
+)
