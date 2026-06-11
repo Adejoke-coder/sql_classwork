@@ -1,0 +1,11 @@
+WITH EducationPurchases as (
+  select c.EducationLevel, avg(s.OrderQuantity) as AveragePurchaseQuantity
+  from `hayjay.customers`c
+  join `hayjay.a_sales`s
+  on c.CustomerKey = s.CustomerKey
+  group by c.EducationLevel
+)
+select *
+from EducationPurchases
+order by AveragePurchaseQuantity
+LIMIT 1
