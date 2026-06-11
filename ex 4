@@ -1,0 +1,11 @@
+WITH IncomeBands as (
+  select CASE
+  when AnnualIncome <30000 THEN 'low'
+  when AnnualIncome <70000 THEN 'medium'
+  Else 'high' End as IncomeBands
+  
+  from `hayjay.customers`
+)
+select IncomeBands, count(*) as CustomerCount
+from IncomeBands
+group by IncomeBands
