@@ -1,0 +1,9 @@
+with TerritorySales as (
+  Select TerritoryKey, sum(OrderQuantity) as TotalQuantity
+  from `hayjay.a_sales`
+  group by TerritoryKey
+)
+select *
+FROM TerritorySales
+order by TotalQuantity DESC
+LIMIT 5
