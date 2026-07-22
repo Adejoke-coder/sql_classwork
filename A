@@ -1,0 +1,2 @@
+SELECT SUM(Sales) AS Total_Sales
+ FROM `high-lacing-494711-d5.myProject.adventureworks` 
