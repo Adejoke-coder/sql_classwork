@@ -1,0 +1,4 @@
+select extract(year from orderdate) as year, sum(Sales) as Total_Sales
+FROM `high-lacing-494711-d5.myProject.adventureworks` 
+GROUP BY year
+ORDER BY year;
