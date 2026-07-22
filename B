@@ -1,0 +1,2 @@
+Select sum(Profit) as Total_Profit
+FROM `high-lacing-494711-d5.myProject.adventureworks` 
